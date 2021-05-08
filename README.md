@@ -24,6 +24,10 @@ Git教程
 				git commit -m "initial project version
 				```
 		2. clone文件夹: `git clone [url]`
+		3. 设置ignore文件:
+			* 这可以避免commit部分本地文件
+			1. 创建.gitignore文件:
+				* 匹配所有.a和.o文件:`*.[oa]`
 	2. 查看当前文件状态: 
 		1. 标准：`git status`
 		2. 简易：`git status -s`
@@ -32,7 +36,13 @@ Git教程
 			* 只看被stage待commit的: `git diff --staged` || `git diff --cached`
 			* 注意git diff只对比stage的，不是面向上一次commit
 	3. 导入Staged状态: `git add .`
-	4. 设置ignore文件:
-		* 这可以避免commit部分本地文件
-		1. 创建.gitignore文件:
-			* 匹配所有.a和.o文件:`*.[oa]`
+	4. commit stage: `git commit -m "消息"`
+		* 自动stage模式: `git commit -a -m "消息"`
+	5. 删除操作
+		1. 删除stage里的文件: `git rm 文件名`
+		2. 只删除stage里但保留在本地: `git rm --cached 文件名`
+	6. 查看commit历史
+		1. 查看更改日期: `git log`
+		2. 参数: -p:显示具体不同, -2:限制两条, --stat:简短信息
+		3. 限制时间：`git log --since=2.weeks` 或者 `2008-01-15`
+		
