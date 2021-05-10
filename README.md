@@ -45,4 +45,8 @@ Git教程
 		1. 查看更改日期: `git log`
 		2. 参数: -p:显示具体不同, -2:限制两条, --stat:简短信息
 		3. 限制时间：`git log --since=2.weeks` 或者 `2008-01-15`
+	7. 撤回操作:
+		1. 覆盖last commit：`git commit --amend` (允许将当前add的东西覆写上一次commit)
+		2. 撤销stage: `git restore --staged 文件名`
+		3. 撤销修改文件: `git restore 文件名`
 		
