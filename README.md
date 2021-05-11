@@ -50,6 +50,7 @@ Git教程
 		1. 覆盖last commit：`git commit --amend` (允许将当前add的东西覆写上一次commit)
 		2. 撤销stage: `git restore --staged <文件名>`
 		3. 撤销修改文件: `git restore <文件名>`
+		4. 回退到某次commit: `git reset --hard <commit_id>`
 	8. 远程仓库:
 		1. 查看远程仓库url: `git remote -v` && `git remote show <仓库名>`
 		2. 添加远程仓库: `git remote add <自定义仓库名> <url>`
@@ -70,8 +71,14 @@ Git教程
 		5. 上传tag: `git push <自定义仓库名> <版本>`
 			* 所有tag上传: `git push <自定义仓库名> --tags`
 		6. 将版本建立新分支: `git checkout -b <分支名> <版本>`
-		
-		
+	10. 分支branch:
+		* 默认分支名master
+		1. 创建新branch: `git branch <分支名>` , HEAD指向当前branch
+		2. 显示当前使用branch: `git log --oneline --decorate` || `git branch -v`, 显示已merge的branch: `git branch --merge`
+		3. 更改branch: `git checkout <分支名>`
+		4. 创建并同步更改branch:`git checkout -b <分支名>`
+		5. 合并branch: `git merge <分支名>`
+		6. 删除branch: `git branch -d <分支名>`
 		
 		
 		
