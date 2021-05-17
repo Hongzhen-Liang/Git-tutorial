@@ -79,6 +79,10 @@ Git教程
 		4. 创建并同步更改branch:`git checkout -b <分支名>`
 		5. 合并branch: `git merge <分支名>`
 		6. 删除branch: `git branch -d <分支名>`
+	11. 远程branch:
+		* 默认远程分支: origin/master
+		* 同步远程分支: git fetch origin
+		* 上传分支: git push <remote> <branch>)
 		
 		
 		
